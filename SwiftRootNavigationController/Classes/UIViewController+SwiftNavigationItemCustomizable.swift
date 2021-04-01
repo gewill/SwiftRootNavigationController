@@ -2,7 +2,7 @@ import UIKit
 
 private var disableInteractivePopKey: String = "disableInteractivePop"
 
-@objc public protocol SwiftNavigationItemCustomizable: class {
+@objc public protocol SwiftNavigationItemCustomizable: AnyObject {
     @objc optional func sw_customBackItemWithTarget(target: Any, action: Selector) -> UIBarButtonItem?
 }
 
