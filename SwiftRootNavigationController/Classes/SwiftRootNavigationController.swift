@@ -245,7 +245,7 @@ open class SwiftRootNavigationController: UINavigationController {
 }
 
 extension SwiftRootNavigationController: UINavigationControllerDelegate, UIGestureRecognizerDelegate {
-    @objc fileprivate func onBack(sender: Any) {
+    @objc fileprivate func onBack(_ sender: Any) {
         _ = popViewController(animated: true)
     }
 
@@ -268,11 +268,11 @@ extension SwiftRootNavigationController: UINavigationControllerDelegate, UIGestu
             }
 
             if !useSystemBackBarButtonItem && !hasSetLeftItem {
-                if unwrapVC.responds(to: #selector(unwrapVC.sw_customBackItemWithTarget(target:action:))) {
-                    unwrapVC.navigationItem.leftBarButtonItem = unwrapVC.sw_customBackItemWithTarget(target: self, action: Selector(("onBack:")))
+                if let customBackItem = unwrapVC.sw_customBackItemWithTarget(target: self, action: #selector(self.onBack(_:))) {
+                    unwrapVC.navigationItem.leftBarButtonItem = customBackItem
                 } else {
                     unwrapVC.navigationItem.leftBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Back", comment: ""), style: .plain, target: self,
-                                                                                action: Selector(("onBack:")))
+                                                                                action: #selector(self.onBack(_:)))
                 }
             }
         }
