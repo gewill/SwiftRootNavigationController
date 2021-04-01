@@ -13,7 +13,7 @@ extension UIViewController: SwiftNavigationItemCustomizable {
         }
 
         get {
-            return objc_getAssociatedObject(self, &disableInteractivePopKey) as? Bool ?? true
+            return objc_getAssociatedObject(self, &disableInteractivePopKey) as? Bool ?? false
         }
     }
 

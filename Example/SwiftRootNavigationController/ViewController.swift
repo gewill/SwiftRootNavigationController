@@ -15,11 +15,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         view.backgroundColor = UIColor.random
-        
+
         title = "viewControllers: \(navigationController?.viewControllers.count ?? 0)"
-        navigationController?.navigationBar.backgroundColor = UIColor.random
+        navigationController?.navigationBar.setBackgroundImage(UIImage(color: UIColor.random, size: CGSize(width: 1, height: 1)), for: .default)
     }
 
     // MARK: - response methods
@@ -57,5 +56,25 @@ extension UIColor {
         if trans > 1 { trans = 1 }
 
         self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: trans)
+    }
+}
+
+public extension UIImage {
+    convenience init(color: UIColor, size: CGSize) {
+        UIGraphicsBeginImageContextWithOptions(size, false, 1)
+
+        defer {
+            UIGraphicsEndImageContext()
+        }
+
+        color.setFill()
+        UIRectFill(CGRect(origin: .zero, size: size))
+
+        guard let aCgImage = UIGraphicsGetImageFromCurrentImageContext()?.cgImage else {
+            self.init()
+            return
+        }
+
+        self.init(cgImage: aCgImage)
     }
 }

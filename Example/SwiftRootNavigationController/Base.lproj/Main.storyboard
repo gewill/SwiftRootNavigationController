@@ -60,10 +60,10 @@
             </objects>
             <point key="canvasLocation" x="1060" y="133.5832083958021"/>
         </scene>
-        <!--Swift Container Navigation Controller-->
+        <!--Swift Root Navigation Controller-->
         <scene sceneID="2w4-m3-tbf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gw1-x7-cFZ" customClass="SwiftContainerNavigationController" customModule="SwiftRootNavigationController" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gw1-x7-cFZ" customClass="SwiftRootNavigationController" customModule="SwiftRootNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EU4-Ua-N1W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

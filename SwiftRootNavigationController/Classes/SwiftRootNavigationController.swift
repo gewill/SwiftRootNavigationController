@@ -141,15 +141,15 @@ open class SwiftRootNavigationController: UINavigationController {
     }
 
     override open var shouldAutorotate: Bool {
-        return (self.topViewController?.shouldAutorotate)!
+        return (self.topViewController?.shouldAutorotate) ?? false
     }
 
     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return (self.topViewController?.supportedInterfaceOrientations)!
+        return (self.topViewController?.supportedInterfaceOrientations) ?? .portrait
     }
 
     override open var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
-        return (self.topViewController?.preferredInterfaceOrientationForPresentation)!
+        return (self.topViewController?.preferredInterfaceOrientationForPresentation) ?? .portrait
     }
 
     override open func responds(to aSelector: Selector!) -> Bool {
@@ -261,9 +261,9 @@ extension SwiftRootNavigationController: UINavigationControllerDelegate, UIGestu
         if !isRootVC {
             let hasSetLeftItem = unwrapVC.navigationItem.leftBarButtonItem != nil
 
-            if hasSetLeftItem && !unwrapVC.sw_hasSetInteractivePop {
+            if hasSetLeftItem && unwrapVC.sw_disableInteractivePop == true {
                 unwrapVC.sw_disableInteractivePop = true
-            } else if !unwrapVC.sw_hasSetInteractivePop {
+            } else if unwrapVC.sw_disableInteractivePop == true {
                 unwrapVC.sw_disableInteractivePop = false
             }
 
@@ -283,11 +283,14 @@ extension SwiftRootNavigationController: UINavigationControllerDelegate, UIGestu
         let isRootVC = viewController == navigationController.viewControllers.first
         let unwrapVC = viewController.unwrapViewController
 
+        if animated == false {
+            viewController.loadViewIfNeeded()
+        }
+
         if unwrapVC.sw_disableInteractivePop {
             interactivePopGestureRecognizer?.delegate = nil
             interactivePopGestureRecognizer?.isEnabled = false
         } else {
-            interactivePopGestureRecognizer?.delaysTouchesBegan = true
             interactivePopGestureRecognizer?.delegate = self
             interactivePopGestureRecognizer?.isEnabled = !isRootVC
         }
@@ -319,16 +322,10 @@ extension SwiftRootNavigationController: UINavigationControllerDelegate, UIGestu
     // MARK: - UIGestureRecognizerDelegate
 
     public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        return true
+        return gestureRecognizer == interactivePopGestureRecognizer
     }
 
     public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return gestureRecognizer == interactivePopGestureRecognizer
-    }
-}
-
-extension UIViewController {
-    fileprivate var sw_hasSetInteractivePop: Bool {
-        return sw_disableInteractivePop
     }
 }
