@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SwiftRootNavigationController: 01f16989ab4fd2faef1b4aba2ccca74385957067
+  SwiftRootNavigationController: be72776369f97bdd98f770ae077781fb17d7be00
 
 PODFILE CHECKSUM: 1a84b64e54139059212a57d65cb50d875535e0af
 

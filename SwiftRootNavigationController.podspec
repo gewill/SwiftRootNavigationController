@@ -1,42 +1,21 @@
 #
 # Be sure to run `pod lib lint SwiftRootNavigationController.podspec' to ensure this is a
 # valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'SwiftRootNavigationController'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SwiftRootNavigationController.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.summary          = 'Implicitly make every view controller has its own navigation bar'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  Implicitly make every view controller has its own navigation bar. A swift version of RTRootNavigationController.
                        DESC
-
   s.homepage         = 'https://github.com/gewill/SwiftRootNavigationController'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Ge Will' => '531sunlight@gmail.com' }
   s.source           = { :git => 'https://github.com/gewill/SwiftRootNavigationController.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '9.0'
-
-  s.source_files = 'SwiftRootNavigationController/Classes/**/*'
+  s.social_media_url = 'https://twitter.com/BoJack_D'
   
-  # s.resource_bundles = {
-  #   'SwiftRootNavigationController' => ['SwiftRootNavigationController/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.swift_version = '5.0'
+  s.ios.deployment_target = '9.0'
+  s.source_files = 'SwiftRootNavigationController/Classes/**/*'
 end

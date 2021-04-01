@@ -88,11 +88,11 @@ open class SwiftContainerNavigationController: UINavigationController {
     }
 
     @available(iOS 9.0, *)
-    override open func allowedChildViewControllersForUnwinding(from source: UIStoryboardUnwindSegueSource) -> [UIViewController] {
+    override open func allowedChildrenForUnwinding(from source: UIStoryboardUnwindSegueSource) -> [UIViewController] {
         if navigationController != nil {
-            return navigationController?.allowedChildViewControllersForUnwinding(from: source) ?? []
+            return navigationController?.allowedChildrenForUnwinding(from: source) ?? []
         }
-        return super.allowedChildViewControllersForUnwinding(from: source)
+        return super.allowedChildrenForUnwinding(from: source)
     }
 
     override open func pushViewController(_ viewController: UIViewController, animated: Bool) {

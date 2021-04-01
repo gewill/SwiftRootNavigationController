@@ -29,15 +29,15 @@ open class SwiftContainerController: UIViewController {
             containerNavigationController?.viewControllers = [controller]
         }
 
-        addChildViewController(containerNavigationController!)
-        containerNavigationController?.didMove(toParentViewController: self)
+        addChild(containerNavigationController!)
+        containerNavigationController?.didMove(toParent: self)
     }
 
     init(contentController: UIViewController) {
         super.init(nibName: nil, bundle: nil)
         contentViewController = contentController
-        addChildViewController(contentViewController!)
-        contentViewController?.didMove(toParentViewController: self)
+        addChild(contentViewController!)
+        contentViewController?.didMove(toParent: self)
     }
 
     override open func viewDidLoad() {
@@ -87,12 +87,12 @@ open class SwiftContainerController: UIViewController {
     }
 
     @available(iOS 11.0, *)
-    override open func prefersHomeIndicatorAutoHidden() -> Bool {
-        return (contentViewController?.prefersHomeIndicatorAutoHidden())!
+    override open var prefersHomeIndicatorAutoHidden: Bool {
+        return (contentViewController?.prefersHomeIndicatorAutoHidden) ?? false
     }
 
     @available(iOS 11.0, *)
-    override open func childViewControllerForHomeIndicatorAutoHidden() -> UIViewController? {
+    override open var childForHomeIndicatorAutoHidden: UIViewController? {
         return contentViewController
     }
 
@@ -105,8 +105,8 @@ open class SwiftContainerController: UIViewController {
     }
 
     @available(iOS 9.0, *)
-    override open func allowedChildViewControllersForUnwinding(from source: UIStoryboardUnwindSegueSource) -> [UIViewController] {
-        return contentViewController?.allowedChildViewControllersForUnwinding(from: source) ?? []
+    override open func allowedChildrenForUnwinding(from source: UIStoryboardUnwindSegueSource) -> [UIViewController] {
+        return contentViewController?.allowedChildrenForUnwinding(from: source) ?? []
     }
 
     override open var hidesBottomBarWhenPushed: Bool {

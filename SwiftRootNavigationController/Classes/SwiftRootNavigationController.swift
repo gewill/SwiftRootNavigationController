@@ -71,13 +71,13 @@ open class SwiftRootNavigationController: UINavigationController {
     }
 
     @available(iOS 9.0, *)
-    override open func allowedChildViewControllersForUnwinding(from source: UIStoryboardUnwindSegueSource) -> [UIViewController] {
-        var controller: [UIViewController]? = super.allowedChildViewControllersForUnwinding(from: source)
+    override open func allowedChildrenForUnwinding(from source: UIStoryboardUnwindSegueSource) -> [UIViewController] {
+        var controller: [UIViewController]? = super.allowedChildrenForUnwinding(from: source)
 
         if controller?.count == 0 {
-            if let index = viewControllers.index(of: source.source) {
+            if let index = viewControllers.firstIndex(of: source.source) {
                 for i in (index - 1) ... 0 {
-                    controller = viewControllers[i].allowedChildViewControllersForUnwinding(from: source)
+                    controller = viewControllers[i].allowedChildrenForUnwinding(from: source)
 
                     if controller?.count != 0 { break }
                 }
@@ -193,7 +193,7 @@ open class SwiftRootNavigationController: UINavigationController {
             }
         }
 
-        if let ctp = controllerToRemove, let index = viewControllers.index(of: ctp) {
+        if let ctp = controllerToRemove, let index = viewControllers.firstIndex(of: ctp) {
             viewControllers.remove(at: index)
             super.setViewControllers(viewControllers, animated: flag)
         }
@@ -315,7 +315,7 @@ extension SwiftRootNavigationController: UINavigationControllerDelegate, UIGestu
         return sw_delegate?.navigationController?(navigationController, interactionControllerFor: animationController)
     }
 
-    public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return sw_delegate?.navigationController?(navigationController, animationControllerFor: operation, from: fromVC, to: toVC)
     }
 
