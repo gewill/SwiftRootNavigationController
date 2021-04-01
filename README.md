@@ -1,10 +1,5 @@
 # SwiftRootNavigationController
 
-[![CI Status](https://img.shields.io/travis/Ge Will/SwiftRootNavigationController.svg?style=flat)](https://travis-ci.org/Ge Will/SwiftRootNavigationController)
-[![Version](https://img.shields.io/cocoapods/v/SwiftRootNavigationController.svg?style=flat)](https://cocoapods.org/pods/SwiftRootNavigationController)
-[![License](https://img.shields.io/cocoapods/l/SwiftRootNavigationController.svg?style=flat)](https://cocoapods.org/pods/SwiftRootNavigationController)
-[![Platform](https://img.shields.io/cocoapods/p/SwiftRootNavigationController.svg?style=flat)](https://cocoapods.org/pods/SwiftRootNavigationController)
-
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
