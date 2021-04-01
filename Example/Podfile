@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'SwiftRootNavigationController_Example' do
+  pod 'SwiftRootNavigationController', :path => '../'
+
+  target 'SwiftRootNavigationController_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
