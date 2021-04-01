@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "summary": "A short description of SwiftRootNavigationController.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Ge Will/SwiftRootNavigationController",
+  "homepage": "https://github.com/gewill/SwiftRootNavigationController",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "Ge Will": "531sunlight@gmail.com"
   },
   "source": {
-    "git": "https://github.com/Ge Will/SwiftRootNavigationController.git",
+    "git": "https://github.com/gewill/SwiftRootNavigationController.git",
     "tag": "0.1.0"
   },
   "platforms": {
