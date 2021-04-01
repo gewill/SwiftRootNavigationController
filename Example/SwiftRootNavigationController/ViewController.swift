@@ -10,7 +10,22 @@ import SwiftRootNavigationController
 import UIKit
 
 class ViewController: UIViewController {
+    // MARK: - outlets
+
+    @IBOutlet var isHiddenNavigationSwitch: UISwitch!
+
+    // MARK: - properties
+
+    var isHiddenNavigation = false
+
     // MARK: - life cycle
+
+    static func create(_ isHiddenNavigation: Bool = false) -> ViewController {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        vc.isHiddenNavigation = isHiddenNavigation
+        return vc
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,13 +34,14 @@ class ViewController: UIViewController {
 
         title = "viewControllers: \(navigationController?.viewControllers.count ?? 0)"
         navigationController?.navigationBar.setBackgroundImage(UIImage(color: UIColor.random, size: CGSize(width: 1, height: 1)), for: .default)
+        
+        navigationController?.isNavigationBarHidden = isHiddenNavigation
     }
 
     // MARK: - response methods
 
     @IBAction func pushButtonClick(_ sender: UIButton) {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "ViewController")
+        let vc = ViewController.create(isHiddenNavigationSwitch.isOn)
         navigationController?.pushViewController(vc, animated: true)
     }
 

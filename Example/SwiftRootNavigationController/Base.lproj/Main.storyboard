@@ -21,10 +21,36 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CbK-UQ-YMB">
-                                <rect key="frame" x="149" y="278" width="76" height="110"/>
+                                <rect key="frame" x="35" y="254" width="305.5" height="159"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jB-Mv-0KZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="305.5" height="39"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6t6-ef-vu4">
+                                                <rect key="frame" x="4" y="4" width="297.5" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is hidden navaigtion when push" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ts-7k-asN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="238.5" height="31"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="29a-OY-26a">
+                                                        <rect key="frame" x="248.5" y="0.0" width="51" height="31"/>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="6t6-ef-vu4" firstAttribute="top" secondItem="4jB-Mv-0KZ" secondAttribute="top" constant="4" id="Z6M-CF-A0X"/>
+                                            <constraint firstItem="6t6-ef-vu4" firstAttribute="leading" secondItem="4jB-Mv-0KZ" secondAttribute="leading" constant="4" id="b9t-ak-QUY"/>
+                                            <constraint firstAttribute="bottom" secondItem="6t6-ef-vu4" secondAttribute="bottom" constant="4" id="bTl-xD-qBT"/>
+                                            <constraint firstAttribute="trailing" secondItem="6t6-ef-vu4" secondAttribute="trailing" constant="4" id="xg0-BC-hce"/>
+                                        </constraints>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Kv-Tp-jAI">
-                                        <rect key="frame" x="0.0" y="0.0" width="76" height="30"/>
+                                        <rect key="frame" x="0.0" y="49" width="305.5" height="30"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <state key="normal" title="push"/>
                                         <connections>
@@ -32,7 +58,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzs-dC-ZnS">
-                                        <rect key="frame" x="0.0" y="40" width="76" height="30"/>
+                                        <rect key="frame" x="0.0" y="89" width="305.5" height="30"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <state key="normal" title="pop"/>
                                         <connections>
@@ -40,7 +66,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddv-YA-opY">
-                                        <rect key="frame" x="0.0" y="80" width="76" height="30"/>
+                                        <rect key="frame" x="0.0" y="129" width="305.5" height="30"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <state key="normal" title="pop to root"/>
                                         <connections>
@@ -58,6 +84,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="q1P-1L-U6Q"/>
+                    <connections>
+                        <outlet property="isHiddenNavigationSwitch" destination="29a-OY-26a" id="qBS-Zo-C3O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
