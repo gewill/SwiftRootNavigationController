@@ -3,6 +3,11 @@
 Implicitly make every view controller has its own navigation bar.
 A swift version of [RTRootNavigationController](https://github.com/rickytan/RTRootNavigationController).
 
+
+https://user-images.githubusercontent.com/12139611/113312367-c9eceb00-933c-11eb-8fd3-d442bd9fceb8.mp4
+
+
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
