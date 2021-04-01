@@ -146,14 +146,14 @@ open class SwiftContainerNavigationController: UINavigationController {
     }
 
     override open var preferredStatusBarStyle: UIStatusBarStyle {
-        return (self.topViewController?.preferredStatusBarStyle)!
+        return (self.topViewController?.preferredStatusBarStyle) ?? .default
     }
 
     override open var prefersStatusBarHidden: Bool {
-        return (self.topViewController?.prefersStatusBarHidden)!
+        return (self.topViewController?.prefersStatusBarHidden) ?? false
     }
 
     override open var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
-        return (topViewController?.preferredStatusBarUpdateAnimation)!
+        return (topViewController?.preferredStatusBarUpdateAnimation) ?? .fade
     }
 }
