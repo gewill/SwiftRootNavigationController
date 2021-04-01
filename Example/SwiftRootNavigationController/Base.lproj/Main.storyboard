@@ -20,25 +20,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CbK-UQ-YMB">
-                                <rect key="frame" x="149.5" y="288.5" width="76" height="90"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CbK-UQ-YMB">
+                                <rect key="frame" x="149" y="278" width="76" height="110"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Kv-Tp-jAI">
                                         <rect key="frame" x="0.0" y="0.0" width="76" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <state key="normal" title="push"/>
                                         <connections>
                                             <action selector="pushButtonClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uqH-kl-X9u"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzs-dC-ZnS">
-                                        <rect key="frame" x="0.0" y="30" width="76" height="30"/>
+                                        <rect key="frame" x="0.0" y="40" width="76" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <state key="normal" title="pop"/>
                                         <connections>
                                             <action selector="popButtonClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Slz-Qh-Zsp"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddv-YA-opY">
-                                        <rect key="frame" x="0.0" y="60" width="76" height="30"/>
+                                        <rect key="frame" x="0.0" y="80" width="76" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <state key="normal" title="pop to root"/>
                                         <connections>
                                             <action selector="popButtonClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uUD-Xv-cmj"/>
@@ -50,8 +53,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                         <constraints>
-                            <constraint firstItem="CbK-UQ-YMB" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="XCW-8f-0rz"/>
-                            <constraint firstItem="CbK-UQ-YMB" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="djo-KL-ByV"/>
+                            <constraint firstItem="CbK-UQ-YMB" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="UtK-P6-Egx"/>
+                            <constraint firstItem="CbK-UQ-YMB" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="mx1-oo-7sF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="q1P-1L-U6Q"/>
@@ -82,6 +85,9 @@
     <resources>
         <systemColor name="secondarySystemFillColor">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

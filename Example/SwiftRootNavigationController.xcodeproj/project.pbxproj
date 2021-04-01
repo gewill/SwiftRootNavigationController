@@ -15,6 +15,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		B86D916A8D847B6D7F0CAFB8 /* Pods_SwiftRootNavigationController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE36E21832BD63D31CEE9B3 /* Pods_SwiftRootNavigationController_Example.framework */; };
+		BE5C20482615DEBE0053B246 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5C20472615DEBE0053B246 /* UIViewControllerExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +45,9 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		8659E7C10B7724FD3E56CAD0 /* Pods-SwiftRootNavigationController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftRootNavigationController_Tests.release.xcconfig"; path = "Target Support Files/Pods-SwiftRootNavigationController_Tests/Pods-SwiftRootNavigationController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A70DF358E77831AFC001C17C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		B9AAE0105F35EFEA17B1E196 /* SwiftRootNavigationController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftRootNavigationController.podspec; path = ../SwiftRootNavigationController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B9AAE0105F35EFEA17B1E196 /* SwiftRootNavigationController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftRootNavigationController.podspec; path = ../SwiftRootNavigationController.podspec; sourceTree = "<group>"; };
 		BB8933B98F462B68B9EFB847 /* Pods-SwiftRootNavigationController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftRootNavigationController_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftRootNavigationController_Tests/Pods-SwiftRootNavigationController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		BE5C20472615DEBE0053B246 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		BEEADDEA2605C6ADBA297921 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				BE5C20472615DEBE0053B246 /* UIViewControllerExtensions.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -334,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				BE5C20482615DEBE0053B246 /* UIViewControllerExtensions.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

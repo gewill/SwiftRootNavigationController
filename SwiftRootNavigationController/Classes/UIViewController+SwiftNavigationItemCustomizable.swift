@@ -6,7 +6,7 @@ private var disableInteractivePopKey: String = "disableInteractivePop"
     @objc optional func sw_customBackItemWithTarget(target: Any, action: Selector) -> UIBarButtonItem?
 }
 
-extension UIViewController: SwiftNavigationItemCustomizable {
+extension UIViewController {
     public var sw_disableInteractivePop: Bool {
         set {
             objc_setAssociatedObject(self, &disableInteractivePopKey, newValue, .OBJC_ASSOCIATION_ASSIGN)
@@ -28,6 +28,4 @@ extension UIViewController: SwiftNavigationItemCustomizable {
     open func sw_navigationBarClass() -> Swift.AnyClass? {
         return nil
     }
-
-    open func sw_customBackItemWithTarget(target: Any, action: Selector) -> UIBarButtonItem? { return nil }
 }

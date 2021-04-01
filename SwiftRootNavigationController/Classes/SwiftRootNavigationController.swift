@@ -268,11 +268,12 @@ extension SwiftRootNavigationController: UINavigationControllerDelegate, UIGestu
             }
 
             if !useSystemBackBarButtonItem && !hasSetLeftItem {
-                if let customBackItem = unwrapVC.sw_customBackItemWithTarget(target: self, action: #selector(self.onBack(_:))) {
+                if let customVC = unwrapVC as? SwiftNavigationItemCustomizable,
+                   let customBackItem = customVC.sw_customBackItemWithTarget?(target: self, action: #selector(onBack(_:))) {
                     unwrapVC.navigationItem.leftBarButtonItem = customBackItem
                 } else {
                     unwrapVC.navigationItem.leftBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Back", comment: ""), style: .plain, target: self,
-                                                                                action: #selector(self.onBack(_:)))
+                                                                                action: #selector(onBack(_:)))
                 }
             }
         }
