@@ -1,5 +1,8 @@
 # SwiftRootNavigationController
 
+Implicitly make every view controller has its own navigation bar.
+A swift version of [RTRootNavigationController](https://github.com/rickytan/RTRootNavigationController).
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -23,6 +26,10 @@ pod 'SwiftRootNavigationController'
 ## Author
 
 Ge Will, 531sunlight@gmail.com
+
+##Thanks
+
+[rickytan](https://github.com/rickytan)/[RTRootNavigationController](https://github.com/rickytan/RTRootNavigationController)
 
 ## License
 
