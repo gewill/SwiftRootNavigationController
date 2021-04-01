@@ -3,7 +3,7 @@
 # valid spec before submitting.
 Pod::Spec.new do |s|
   s.name             = 'SwiftRootNavigationController'
-  s.version          = '0.1.0'
+  s.version          = '0.1.2'
   s.summary          = 'Implicitly make every view controller has its own navigation bar'
   s.description      = <<-DESC
   Implicitly make every view controller has its own navigation bar. A swift version of RTRootNavigationController.
