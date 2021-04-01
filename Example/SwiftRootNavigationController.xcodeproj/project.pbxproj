@@ -43,10 +43,10 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		8659E7C10B7724FD3E56CAD0 /* Pods-SwiftRootNavigationController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftRootNavigationController_Tests.release.xcconfig"; path = "Target Support Files/Pods-SwiftRootNavigationController_Tests/Pods-SwiftRootNavigationController_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A70DF358E77831AFC001C17C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		B9AAE0105F35EFEA17B1E196 /* SwiftRootNavigationController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SwiftRootNavigationController.podspec; path = ../SwiftRootNavigationController.podspec; sourceTree = "<group>"; };
+		A70DF358E77831AFC001C17C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B9AAE0105F35EFEA17B1E196 /* SwiftRootNavigationController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftRootNavigationController.podspec; path = ../SwiftRootNavigationController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BB8933B98F462B68B9EFB847 /* Pods-SwiftRootNavigationController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftRootNavigationController_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftRootNavigationController_Tests/Pods-SwiftRootNavigationController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		BEEADDEA2605C6ADBA297921 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		BEEADDEA2605C6ADBA297921 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +156,6 @@
 				BB8933B98F462B68B9EFB847 /* Pods-SwiftRootNavigationController_Tests.debug.xcconfig */,
 				8659E7C10B7724FD3E56CAD0 /* Pods-SwiftRootNavigationController_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,10 +212,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = RLK76T8Y89;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = RLK76T8Y89;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -227,6 +228,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -478,10 +480,11 @@
 			baseConfigurationReference = 2BC4B5C2032C02B873FA543A /* Pods-SwiftRootNavigationController_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RLK76T8Y89;
 				INFOPLIST_FILE = SwiftRootNavigationController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.gewill.SwiftRootNavigationController-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -493,10 +496,11 @@
 			baseConfigurationReference = 06EB647AE58F06B743C08381 /* Pods-SwiftRootNavigationController_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RLK76T8Y89;
 				INFOPLIST_FILE = SwiftRootNavigationController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.gewill.SwiftRootNavigationController-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -507,6 +511,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BB8933B98F462B68B9EFB847 /* Pods-SwiftRootNavigationController_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = RLK76T8Y89;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -529,6 +534,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8659E7C10B7724FD3E56CAD0 /* Pods-SwiftRootNavigationController_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = RLK76T8Y89;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

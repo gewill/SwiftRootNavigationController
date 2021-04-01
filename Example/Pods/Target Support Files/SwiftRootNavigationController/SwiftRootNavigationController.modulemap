@@ -1,0 +1,6 @@
+framework module SwiftRootNavigationController {
+  umbrella header "SwiftRootNavigationController-umbrella.h"
+
+  export *
+  module * { export * }
+}

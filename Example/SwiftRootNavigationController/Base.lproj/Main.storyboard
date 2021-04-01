@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gw1-x7-cFZ">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SwiftRootNavigationController_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="vXZ-lx-hvc" customClass="ViewController" customModule="SwiftRootNavigationController_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -20,11 +19,69 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CbK-UQ-YMB">
+                                <rect key="frame" x="149.5" y="288.5" width="76" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Kv-Tp-jAI">
+                                        <rect key="frame" x="0.0" y="0.0" width="76" height="30"/>
+                                        <state key="normal" title="push"/>
+                                        <connections>
+                                            <action selector="pushButtonClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uqH-kl-X9u"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzs-dC-ZnS">
+                                        <rect key="frame" x="0.0" y="30" width="76" height="30"/>
+                                        <state key="normal" title="pop"/>
+                                        <connections>
+                                            <action selector="popButtonClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Slz-Qh-Zsp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddv-YA-opY">
+                                        <rect key="frame" x="0.0" y="60" width="76" height="30"/>
+                                        <state key="normal" title="pop to root"/>
+                                        <connections>
+                                            <action selector="popButtonClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uUD-Xv-cmj"/>
+                                            <action selector="popToRootButtonClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eJ7-fz-r0T"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                        <constraints>
+                            <constraint firstItem="CbK-UQ-YMB" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="XCW-8f-0rz"/>
+                            <constraint firstItem="CbK-UQ-YMB" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="djo-KL-ByV"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="q1P-1L-U6Q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1060" y="133.5832083958021"/>
+        </scene>
+        <!--Swift Container Navigation Controller-->
+        <scene sceneID="2w4-m3-tbf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gw1-x7-cFZ" customClass="SwiftContainerNavigationController" customModule="SwiftRootNavigationController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EU4-Ua-N1W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="bD5-CL-mjw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8hi-2k-CS7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120.8" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="secondarySystemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

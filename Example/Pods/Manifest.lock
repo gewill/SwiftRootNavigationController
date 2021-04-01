@@ -1,0 +1,16 @@
+PODS:
+  - SwiftRootNavigationController (0.1.0)
+
+DEPENDENCIES:
+  - SwiftRootNavigationController (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftRootNavigationController:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SwiftRootNavigationController: 5cd0c0fc6c4e3eb28ef0ef16ffa52e48693dec94
+
+PODFILE CHECKSUM: 1a84b64e54139059212a57d65cb50d875535e0af
+
+COCOAPODS: 1.10.1
