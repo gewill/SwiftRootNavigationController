@@ -31,7 +31,7 @@ pod 'SwiftRootNavigationController'
 
 Ge Will, 531sunlight@gmail.com
 
-##Thanks
+## Thanks
 
 [rickytan](https://github.com/rickytan)/[RTRootNavigationController](https://github.com/rickytan/RTRootNavigationController)
 
